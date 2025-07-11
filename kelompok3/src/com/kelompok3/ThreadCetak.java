@@ -17,7 +17,6 @@ public class ThreadCetak implements Runnable {
                 //blok sini untuk animasi loading
                 // sampai sini
 //                System.out.println("dokumen siap di cetak " + namaDocuments);
-                System.out.println("#");
                 Thread.sleep(300);
             }
             System.out.println("proses mencetak dokumen ");
@@ -26,7 +25,7 @@ public class ThreadCetak implements Runnable {
             Thread.sleep(1000);
 
             System.out.println("dokumen " + namaDocuments + " berhasil di cetak ");
-            System.out.println("Ini dia dokumen nya yang berasil di cetak atas nama dokumen " + namaDocuments);
+            System.out.println("Ini dia dokumen nya yang berasil di cetak atas nama dokumen: " + namaDocuments);
         } catch (InterruptedException e) {
             //error ketika dokumen gagal di siapakan
             Thread.currentThread().interrupt();
