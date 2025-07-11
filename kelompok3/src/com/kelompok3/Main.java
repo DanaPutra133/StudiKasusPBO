@@ -29,6 +29,7 @@ public class Main {
 
         System.out.println("\n" + ANSI_PURPLE + ">>>>> Masukan Detail Dokumen <<<<<" + ANSI_RESET);
         System.out.print("Masukan nama dokumen yang akan di cetak: ");
+        // input nama dokumen dari user
         String namaDocuments = scanner.nextLine();
 
         ThreadPersiapan persiapanTugas = new ThreadPersiapan(namaDocuments);
@@ -67,6 +68,7 @@ public class Main {
 
         // Cek status akhir persiapan dokumen
         // kalau udah selesai threadcetak baru jalan
+        // jika threadpersiapan membalikan nilai true ke isDONE maka perintah cetak akan di jalankan
         if (persiapanTugas.isDONE()) {
             System.out.println(ANSI_GREEN + "✔ Persiapan dokumen '" + namaDocuments + "' SELESAI!" + ANSI_RESET);
             System.out.println(ANSI_BLUE + "Memulai proses pencetakan..." + ANSI_RESET);
